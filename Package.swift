@@ -10,6 +10,13 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .systemLibrary(name: "CFontConfig")
+        .systemLibrary(
+            name: "CFontConfig",
+            pkgConfig: "fontconfig",
+            providers: [
+                .apt(["libfontconfig1-dev"]),
+                .brew(["fontconfig"]),
+            ]
+        )
     ]
 )
