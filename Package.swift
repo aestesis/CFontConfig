@@ -12,10 +12,10 @@ let package = Package(
     targets: [
         .systemLibrary(
             name: "CFontConfig",
-            pkgConfig: "fontconfig",
+            pkgConfig: "cairo",
             providers: [
-                .apt(["libfontconfig1-dev"]),
-                .brew(["fontconfig"]),
+                .apt(["libcairo-dev"]),
+                .brew(["cairo"]),
             ]
         )
     ]
